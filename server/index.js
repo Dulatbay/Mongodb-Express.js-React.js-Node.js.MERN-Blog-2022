@@ -12,6 +12,7 @@ const connString = process.env.DB_CONNECTION_STR
 
 
 app.use(cors())
+app.use(express.json())
 
 
 
