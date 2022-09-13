@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities
+
+@layes base{
+    body{
+        font-family: 'Poppins', sans-serif
+    }
+}
