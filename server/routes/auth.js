@@ -7,13 +7,13 @@ router.post('/register', register)
 
 
 // Login
-router.post('/register', register)
+router.post('/login', login)
 
 
 
 
 // Get/Check
-router.get('/register', register)
+router.get('/check', check)
 
 
 export default router

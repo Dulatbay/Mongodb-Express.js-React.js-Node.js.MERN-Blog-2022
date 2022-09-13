@@ -36,7 +36,7 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { userName, password } = req.body;
-    const user = User.findOne({ userName });
+    const user = await User.findOne({ userName });
     if (user == null) {
       return res
         .status(400)
@@ -51,7 +51,7 @@ export const login = async (req, res) => {
         id: user.id,
       },
       process.env.JWT_SECRET,
-      {expiresIn: '30d'}
+      { expiresIn: '30d' }
     );
     return res.json({
       token,
@@ -59,12 +59,14 @@ export const login = async (req, res) => {
       message: "Вы вошли в систему"
     })
   } catch (error) {
+
     console.log(error);
   }
 };
 
 export const check = async (req, res) => {
   try {
+    
   } catch (error) {
     console.log(error);
   }
